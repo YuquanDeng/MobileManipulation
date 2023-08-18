@@ -1,0 +1,19 @@
+# Directory for the pretrained policy
+policy_dir: '04-17/16-47'
+
+# Directory for loading short goal images, initial state, and trajectory. 
+topomap_dir: 'testing'
+
+# {policy, manual}
+mode: 'policy'
+
+# Disable logging
+defaults:  
+  - _self_  
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled 
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .

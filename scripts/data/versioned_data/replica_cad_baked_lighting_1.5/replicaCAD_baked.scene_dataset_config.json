@@ -1,0 +1,145 @@
+{
+  "stages": {
+    "default_attributes": {
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "front": [
+        0,
+        0,
+        -1
+      ]
+    },
+    "paths": {
+      ".json": [
+        "configs/stages"
+      ]
+    }
+  },
+  "articulated_objects": {
+    "paths": {
+      ".urdf": [
+        "urdf/*/"
+      ]
+    }
+  },
+  "scene_instances": {
+    "default_attributes": {
+      "default_lighting": "no_lights"
+    },
+    "paths": {
+      ".json": [
+        "configs/scenes"
+      ]
+    }
+  },
+  "navmesh_instances": {
+    "Baked_sc0_staging_00": "navmeshes/Baked_sc0_staging_00.navmesh",
+    "Baked_sc0_staging_01": "navmeshes/Baked_sc0_staging_01.navmesh",
+    "Baked_sc0_staging_02": "navmeshes/Baked_sc0_staging_02.navmesh",
+    "Baked_sc0_staging_03": "navmeshes/Baked_sc0_staging_03.navmesh",
+    "Baked_sc0_staging_04": "navmeshes/Baked_sc0_staging_04.navmesh",
+    "Baked_sc0_staging_05": "navmeshes/Baked_sc0_staging_05.navmesh",
+    "Baked_sc0_staging_06": "navmeshes/Baked_sc0_staging_06.navmesh",
+    "Baked_sc0_staging_07": "navmeshes/Baked_sc0_staging_07.navmesh",
+    "Baked_sc0_staging_08": "navmeshes/Baked_sc0_staging_08.navmesh",
+    "Baked_sc0_staging_09": "navmeshes/Baked_sc0_staging_09.navmesh",
+    "Baked_sc0_staging_10": "navmeshes/Baked_sc0_staging_10.navmesh",
+    "Baked_sc0_staging_11": "navmeshes/Baked_sc0_staging_11.navmesh",
+    "Baked_sc0_staging_12": "navmeshes/Baked_sc0_staging_12.navmesh",
+    "Baked_sc0_staging_13": "navmeshes/Baked_sc0_staging_13.navmesh",
+    "Baked_sc0_staging_14": "navmeshes/Baked_sc0_staging_14.navmesh",
+    "Baked_sc0_staging_15": "navmeshes/Baked_sc0_staging_15.navmesh",
+    "Baked_sc0_staging_16": "navmeshes/Baked_sc0_staging_16.navmesh",
+    "Baked_sc0_staging_17": "navmeshes/Baked_sc0_staging_17.navmesh",
+    "Baked_sc0_staging_18": "navmeshes/Baked_sc0_staging_18.navmesh",
+    "Baked_sc0_staging_19": "navmeshes/Baked_sc0_staging_19.navmesh",
+    "Baked_sc0_staging_20": "navmeshes/Baked_sc0_staging_20.navmesh",
+    "Baked_sc1_staging_00": "navmeshes/Baked_sc1_staging_00.navmesh",
+    "Baked_sc1_staging_01": "navmeshes/Baked_sc1_staging_01.navmesh",
+    "Baked_sc1_staging_02": "navmeshes/Baked_sc1_staging_02.navmesh",
+    "Baked_sc1_staging_03": "navmeshes/Baked_sc1_staging_03.navmesh",
+    "Baked_sc1_staging_04": "navmeshes/Baked_sc1_staging_04.navmesh",
+    "Baked_sc1_staging_05": "navmeshes/Baked_sc1_staging_05.navmesh",
+    "Baked_sc1_staging_06": "navmeshes/Baked_sc1_staging_06.navmesh",
+    "Baked_sc1_staging_07": "navmeshes/Baked_sc1_staging_07.navmesh",
+    "Baked_sc1_staging_08": "navmeshes/Baked_sc1_staging_08.navmesh",
+    "Baked_sc1_staging_09": "navmeshes/Baked_sc1_staging_09.navmesh",
+    "Baked_sc1_staging_10": "navmeshes/Baked_sc1_staging_10.navmesh",
+    "Baked_sc1_staging_11": "navmeshes/Baked_sc1_staging_11.navmesh",
+    "Baked_sc1_staging_12": "navmeshes/Baked_sc1_staging_12.navmesh",
+    "Baked_sc1_staging_13": "navmeshes/Baked_sc1_staging_13.navmesh",
+    "Baked_sc1_staging_14": "navmeshes/Baked_sc1_staging_14.navmesh",
+    "Baked_sc1_staging_15": "navmeshes/Baked_sc1_staging_15.navmesh",
+    "Baked_sc1_staging_16": "navmeshes/Baked_sc1_staging_16.navmesh",
+    "Baked_sc1_staging_17": "navmeshes/Baked_sc1_staging_17.navmesh",
+    "Baked_sc1_staging_18": "navmeshes/Baked_sc1_staging_18.navmesh",
+    "Baked_sc1_staging_19": "navmeshes/Baked_sc1_staging_19.navmesh",
+    "Baked_sc1_staging_20": "navmeshes/Baked_sc1_staging_20.navmesh",
+    "Baked_sc2_staging_00": "navmeshes/Baked_sc2_staging_00.navmesh",
+    "Baked_sc2_staging_01": "navmeshes/Baked_sc2_staging_01.navmesh",
+    "Baked_sc2_staging_02": "navmeshes/Baked_sc2_staging_02.navmesh",
+    "Baked_sc2_staging_03": "navmeshes/Baked_sc2_staging_03.navmesh",
+    "Baked_sc2_staging_04": "navmeshes/Baked_sc2_staging_04.navmesh",
+    "Baked_sc2_staging_05": "navmeshes/Baked_sc2_staging_05.navmesh",
+    "Baked_sc2_staging_06": "navmeshes/Baked_sc2_staging_06.navmesh",
+    "Baked_sc2_staging_07": "navmeshes/Baked_sc2_staging_07.navmesh",
+    "Baked_sc2_staging_08": "navmeshes/Baked_sc2_staging_08.navmesh",
+    "Baked_sc2_staging_09": "navmeshes/Baked_sc2_staging_09.navmesh",
+    "Baked_sc2_staging_10": "navmeshes/Baked_sc2_staging_10.navmesh",
+    "Baked_sc2_staging_11": "navmeshes/Baked_sc2_staging_11.navmesh",
+    "Baked_sc2_staging_12": "navmeshes/Baked_sc2_staging_12.navmesh",
+    "Baked_sc2_staging_13": "navmeshes/Baked_sc2_staging_13.navmesh",
+    "Baked_sc2_staging_14": "navmeshes/Baked_sc2_staging_14.navmesh",
+    "Baked_sc2_staging_15": "navmeshes/Baked_sc2_staging_15.navmesh",
+    "Baked_sc2_staging_16": "navmeshes/Baked_sc2_staging_16.navmesh",
+    "Baked_sc2_staging_17": "navmeshes/Baked_sc2_staging_17.navmesh",
+    "Baked_sc2_staging_18": "navmeshes/Baked_sc2_staging_18.navmesh",
+    "Baked_sc2_staging_19": "navmeshes/Baked_sc2_staging_19.navmesh",
+    "Baked_sc2_staging_20": "navmeshes/Baked_sc2_staging_20.navmesh",
+    "Baked_sc3_staging_00": "navmeshes/Baked_sc3_staging_00.navmesh",
+    "Baked_sc3_staging_01": "navmeshes/Baked_sc3_staging_01.navmesh",
+    "Baked_sc3_staging_02": "navmeshes/Baked_sc3_staging_02.navmesh",
+    "Baked_sc3_staging_03": "navmeshes/Baked_sc3_staging_03.navmesh",
+    "Baked_sc3_staging_04": "navmeshes/Baked_sc3_staging_04.navmesh",
+    "Baked_sc3_staging_05": "navmeshes/Baked_sc3_staging_05.navmesh",
+    "Baked_sc3_staging_06": "navmeshes/Baked_sc3_staging_06.navmesh",
+    "Baked_sc3_staging_07": "navmeshes/Baked_sc3_staging_07.navmesh",
+    "Baked_sc3_staging_08": "navmeshes/Baked_sc3_staging_08.navmesh",
+    "Baked_sc3_staging_09": "navmeshes/Baked_sc3_staging_09.navmesh",
+    "Baked_sc3_staging_10": "navmeshes/Baked_sc3_staging_10.navmesh",
+    "Baked_sc3_staging_11": "navmeshes/Baked_sc3_staging_11.navmesh",
+    "Baked_sc3_staging_12": "navmeshes/Baked_sc3_staging_12.navmesh",
+    "Baked_sc3_staging_13": "navmeshes/Baked_sc3_staging_13.navmesh",
+    "Baked_sc3_staging_14": "navmeshes/Baked_sc3_staging_14.navmesh",
+    "Baked_sc3_staging_15": "navmeshes/Baked_sc3_staging_15.navmesh",
+    "Baked_sc3_staging_16": "navmeshes/Baked_sc3_staging_16.navmesh",
+    "Baked_sc3_staging_17": "navmeshes/Baked_sc3_staging_17.navmesh",
+    "Baked_sc3_staging_18": "navmeshes/Baked_sc3_staging_18.navmesh",
+    "Baked_sc3_staging_19": "navmeshes/Baked_sc3_staging_19.navmesh",
+    "Baked_sc3_staging_20": "navmeshes/Baked_sc3_staging_20.navmesh",
+    "Baked_sc4_staging_00": "navmeshes/Baked_sc4_staging_00.navmesh",
+    "Baked_sc4_staging_01": "navmeshes/Baked_sc4_staging_01.navmesh",
+    "Baked_sc4_staging_02": "navmeshes/Baked_sc4_staging_02.navmesh",
+    "Baked_sc4_staging_03": "navmeshes/Baked_sc4_staging_03.navmesh",
+    "Baked_sc4_staging_04": "navmeshes/Baked_sc4_staging_04.navmesh",
+    "Baked_sc4_staging_05": "navmeshes/Baked_sc4_staging_05.navmesh",
+    "Baked_sc4_staging_06": "navmeshes/Baked_sc4_staging_06.navmesh",
+    "Baked_sc4_staging_07": "navmeshes/Baked_sc4_staging_07.navmesh",
+    "Baked_sc4_staging_08": "navmeshes/Baked_sc4_staging_08.navmesh",
+    "Baked_sc4_staging_09": "navmeshes/Baked_sc4_staging_09.navmesh",
+    "Baked_sc4_staging_10": "navmeshes/Baked_sc4_staging_10.navmesh",
+    "Baked_sc4_staging_11": "navmeshes/Baked_sc4_staging_11.navmesh",
+    "Baked_sc4_staging_12": "navmeshes/Baked_sc4_staging_12.navmesh",
+    "Baked_sc4_staging_13": "navmeshes/Baked_sc4_staging_13.navmesh",
+    "Baked_sc4_staging_14": "navmeshes/Baked_sc4_staging_14.navmesh",
+    "Baked_sc4_staging_15": "navmeshes/Baked_sc4_staging_15.navmesh",
+    "Baked_sc4_staging_16": "navmeshes/Baked_sc4_staging_16.navmesh",
+    "Baked_sc4_staging_17": "navmeshes/Baked_sc4_staging_17.navmesh",
+    "Baked_sc4_staging_18": "navmeshes/Baked_sc4_staging_18.navmesh",
+    "Baked_sc4_staging_19": "navmeshes/Baked_sc4_staging_19.navmesh",
+    "Baked_sc4_staging_20": "navmeshes/Baked_sc4_staging_20.navmesh"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "stage_instance": {
+    "template_name": "Baked_sc3_staging_17",
+    "translation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "rotation": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "translation_origin": "COM"
+  },
+  "default_lighting": "no_lights",
+  "navmesh_instance": "Baked_sc3_staging_17",
+  "articulated_object_instances": [
+    {
+      "template_name": "fridge",
+      "fixed_base": true,
+      "auto_clamp_joint_limits": true,
+      "translation_origin": "COM",
+      "motion_type": "DYNAMIC",
+      "translation": [
+        -2.1782121658325195,
+        1.01,
+        3.6299728393554687
+      ],
+      "rotation": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "template_name": "kitchen_counter",
+      "fixed_base": true,
+      "auto_clamp_joint_limits": true,
+      "translation_origin": "COM",
+      "motion_type": "DYNAMIC",
+      "translation": [
+        -2,
+        0.03,
+        1.6346
+      ],
+      "rotation": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "uniform_scale": 0.98
+    },
+    {
+      "template_name": "kitchenCupboard_01",
+      "fixed_base": true,
+      "auto_clamp_joint_limits": true,
+      "translation_origin": "COM",
+      "motion_type": "DYNAMIC",
+      "translation": [
+        -2.3,
+        1.53,
+        1.6346
+      ],
+      "rotation": [
+        -0.707,
+        0.707,
+        0,
+        0
+      ],
+      "uniform_scale": 0.38
+    },
+    {
+      "template_name": "door2",
+      "fixed_base": true,
+      "auto_clamp_joint_limits": true,
+      "translation_origin": "COM",
+      "motion_type": "DYNAMIC",
+      "translation": [
+        -0.35,
+        2.4,
+        -2.65
+      ],
+      "rotation": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "template_name": "cabinet",
+      "fixed_base": true,
+      "auto_clamp_joint_limits": true,
+      "translation_origin": "COM",
+      "motion_type": "DYNAMIC",
+      "translation": [
+        0.6236680746078491,
+        0.05,
+        6.069861888885498
+      ],
+      "rotation": [
+        0.7057900913293746,
+        -1.2644053387633752e-07,
+        0.7084210238136994,
+        8.429368908435822e-08
+      ]
+    },
+    {
+      "template_name": "chestOfDrawers_01",
+      "fixed_base": true,
+      "auto_clamp_joint_limits": true,
+      "translation_origin": "COM",
+      "motion_type": "DYNAMIC",
+      "translation": [
+        -2.251952648162842,
+        0.0,
+        -2.075793504714966
+      ],
+      "rotation": [
+        0.7070818793695812,
+        -0.7070816475619124,
+        -0.005948058348433559,
+        -0.005948121568706916
+      ],
+      "uniform_scale": 0.4
+    }
+  ]
+}

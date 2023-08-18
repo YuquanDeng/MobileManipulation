@@ -1,0 +1,44 @@
+# topomap configs
+dir: 'testing'
+playback: true
+no_reset_pos: false
+
+# configs for agent
+init_pos: 'bl'
+init_rot: 'right'
+
+
+# configs for camera.
+resolution: 256
+width: 256
+height: 256
+
+sensor_position:
+  - 0
+  - 1.25
+  - 0
+sensor_orientation: 
+  - 0
+  - 0
+  - 0 
+hfov: 90
+
+# log results.
+logdir: &reference_dir './sim_outputs/${now:%Y-%m-%d}/${now:%H-%M}'
+
+# python foo.py hydra.run.dir=. hydra.output_subdir=null hydra/job_logging=disabled hydra/hydra_logging=disabled
+defaults:  
+  - _self_  
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled 
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .
+
+# hydra:
+#   output_subdir: null
+#   run:
+#     dir: *reference_dir
+

@@ -1,0 +1,46 @@
+# MODEL CONFIGS
+
+# model name (hint: check ../config/models.yaml) (default: large_gnm)
+model: 'gnm_large'
+# temporal distance within the next node in the topomap before localizing to it (default: 3)
+close_threshold: 30
+# temporal number of locobal nodes to look at in the topopmap for localization (default: 2)
+radius: 4
+# index of the waypoint used for navigation (between 0 and 4 or how many waypoints your model predicts) (default: 2)
+waypoint: 4
+# goal node index in the topomap (if -1, then the goal node is the last node in the topomap) (default: -1)
+goal_node: -1
+# username.
+username: admin
+# password.
+password: dryshyyucivp
+
+# log results.
+logdir: &reference_dir './gnm_outputs/${now:%Y-%m-%d}/${now:%H-%M}'
+verbose: False
+
+hostname: 192.168.80.3
+time_sync_interval_sec:     # TODO: Fix this!
+
+# SPOT CONFIG.
+VELOCITY_BASE_SPEED: 0.5  # m/s
+VELOCITY_BASE_ANGULAR: 0.53  # rad/sec
+VELOCITY_CMD_DURATION: 1  # seconds
+COMMAND_INPUT_RATE: 0.1
+# camera source of the observations in context queue.
+OBSERVATION_SOURCE: 'hand_image'
+
+# DATA ACQUISITION.
+# path to topomap images
+dir: 'test'
+# interval between acquiring images
+sleep_between_capture: 0.2
+
+# disable creating yaml file just set dir = . 
+hydra:
+  run:
+    dir: *reference_dir
+
+defaults: 
+  - _self_ 
+  - override hydra/job_logging: disabled  

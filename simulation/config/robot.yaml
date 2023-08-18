@@ -1,0 +1,4 @@
+# linear and angular speed limits for the agent from 
+# "benchmark/nav/pointnav/pointnav_habitat_test.yaml"
+max_v: 0.25 # m/s -> the exact measurement is 0.2471
+max_w: 0.18 # rad/s 

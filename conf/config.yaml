@@ -1,0 +1,21 @@
+# training configs
+learning_rate: 0.001
+epochs: 80
+
+# Load data configs
+preprocessed_features: true
+preprocessed_dataset: true
+batch_size: 512
+interval: 3
+
+# device.
+no_gpu: false
+which_gpu: 0
+
+# log results.
+save_params: true
+logdir: &reference_dir '../conf_outputs/${now:%Y-%m-%d}/${now:%H-%M}'
+
+hydra:
+  run:
+    dir: *reference_dir

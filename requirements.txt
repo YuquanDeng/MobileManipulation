@@ -1,0 +1,12 @@
+torch==1.13.1
+numpy==1.23.5
+matplotlib==3.1.2
+torchvision==0.14.1
+tqdm==4.64.1
+
+omegaconf==2.3.0
+hydra-core==1.3.2
+
+pygame==2.0.1
+pybullet==3.0.4
+transforms3d

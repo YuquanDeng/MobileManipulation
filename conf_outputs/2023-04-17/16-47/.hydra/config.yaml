@@ -1,0 +1,10 @@
+learning_rate: 0.001
+epochs: 80
+preprocessed_features: false
+preprocessed_dataset: false
+batch_size: 512
+interval: 3
+no_gpu: true
+which_gpu: 0
+save_params: true
+logdir: ../conf_outputs/${now:%Y-%m-%d}/${now:%H-%M}

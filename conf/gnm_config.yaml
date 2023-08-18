@@ -1,0 +1,43 @@
+# model configs
+
+# model name (hint: check ../config/models.yaml) (default: large_gnm)
+model: 'gnm_large'
+# temporal distance within the next node in the topomap before localizing to it (default: 3)
+close_threshold: 3
+# temporal number of locobal nodes to look at in the topopmap for localization (default: 2)
+radius: 2
+# index of the waypoint used for navigation (between 0 and 4 or how many waypoints your model predicts) (default: 2)
+waypoint: 2
+# goal node index in the topomap (if -1, then the goal node is the last node in the topomap) (default: -1)
+goal_node: -1
+# mode: policy, video, or manual
+mode: 'video'
+# path to topomap images
+dir: 'br_right_circle'
+
+# configs for camera.
+resolution: 256
+width: 256
+height: 256
+
+sensor_position:
+  - 0
+  - 1.25
+  - 0
+sensor_orientation: 
+  - 0
+  - 0
+  - 0 
+hfov: 90
+
+# log results.
+logdir: &reference_dir './gnm_outputs/${now:%Y-%m-%d}/${now:%H-%M}'
+
+# disable creating yaml file just set dir = . 
+hydra:
+  run:
+    dir: *reference_dir
+
+defaults: 
+  - _self_ 
+  - override hydra/job_logging: disabled  

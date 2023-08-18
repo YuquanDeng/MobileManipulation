@@ -1,0 +1,27 @@
+# training configs
+learning_rate: 0.001
+epochs: 80
+
+# Load data configs
+preprocessed_features: true
+preprocessed_dataset: true
+batch_size: 512
+interval: 3
+
+# device.
+no_gpu: false
+which_gpu: 0
+
+# log results.
+logdir: &reference_dir './configs_output/visual_nav/${now:%m-%d}/${now:%H-%M}'
+
+# Default: No auto-logging.  
+defaults:  
+- _self_  
+- override hydra/hydra_logging: disabled  
+- override hydra/job_logging: disabled  
+  
+hydra:  
+  output_subdir: null  
+  run:  
+    dir: .

@@ -1,15 +1,9 @@
-[submodule "simulation/habitat-sim"]
-	path = simulation/habitat-sim
-	url = https://github.com/YuquanDeng/habitat-sim
-[submodule "simulation/simulation/habitat-lab"]
-	path = simulation/simulation/habitat-lab
-	url = https://github.com/YuquanDeng/habitat-lab
-[submodule "simulate/habitat-lab"]
-	path = simulate/habitat-lab
-	url = https://github.com/facebookresearch/habitat-lab
-[submodule "simulation/habitat-lab"]
-	path = simulation/habitat-lab
-	url = https://github.com/facebookresearch/habitat-lab
 [submodule "third_party/drive-any-robot"]
 	path = third_party/drive-any-robot
 	url = https://github.com/YuquanDeng/drive-any-robot.git
+[submodule "third_party/habitat-sim"]
+	path = third_party/habitat-sim
+	url = https://github.com/YuquanDeng/habitat-sim
+[submodule "third_party/habitat-lab"]
+	path = third_party/habitat-lab
+	url = https://github.com/YuquanDeng/habitat-lab

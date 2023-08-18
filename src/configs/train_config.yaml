@@ -16,7 +16,7 @@ which_gpu: 0
 # log results.
 save_params: false
 save_log: false
-logdir: &reference_dir '../configs_output/visual_nav/${now:%m-%d}/${now:%H-%M}'
+logdir: &reference_dir '../configs_output/siamese/${now:%m-%d}/${now:%H-%M}'
 
 # Default: No auto-logging.  
 defaults:  

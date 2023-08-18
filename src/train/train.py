@@ -17,7 +17,7 @@ class PolicyTrainer(object):
         """
         Load dataset.
         """
-        dataset_dir = os.path.join(os.getcwd(), '../../data/visual_nav/')
+        dataset_dir = os.path.join(os.getcwd(), '../../data/siamese/')
         if not os.path.exists(dataset_dir):
             os.makedirs(dataset_dir)
         if preprocessed_features:

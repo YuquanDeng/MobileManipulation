@@ -10,6 +10,6 @@
 [submodule "simulation/habitat-lab"]
 	path = simulation/habitat-lab
 	url = https://github.com/facebookresearch/habitat-lab
-[submodule "drive-any-robot"]
-	path = drive-any-robot
+[submodule "third_party/drive-any-robot"]
+	path = third_party/drive-any-robot
 	url = https://github.com/YuquanDeng/drive-any-robot.git

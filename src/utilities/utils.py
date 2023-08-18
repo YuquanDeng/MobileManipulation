@@ -15,6 +15,14 @@ import torch.nn as nn
 # Methods for data preprocessing.
 ################################
 
+def create_directory(dir: str):
+    """
+    Create the given directory if doesn't exist.
+    """
+    if not os.path.exists(dir):
+        os.makedirs(dir)
+    return
+
 def get_a1_dataset(data_dir: str="/data/yuquand/a1_demo/") -> dict:
     """
     Parameters: 

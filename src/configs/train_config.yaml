@@ -7,13 +7,16 @@ preprocessed_features: true
 preprocessed_dataset: true
 batch_size: 512
 interval: 3
+dataset_dir: '/data/yuquand/a1_demo/'
 
 # device.
 no_gpu: false
 which_gpu: 0
 
 # log results.
-logdir: &reference_dir './configs_output/visual_nav/${now:%m-%d}/${now:%H-%M}'
+save_params: false
+save_log: false
+logdir: &reference_dir '../configs_output/visual_nav/${now:%m-%d}/${now:%H-%M}'
 
 # Default: No auto-logging.  
 defaults:  

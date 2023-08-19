@@ -229,7 +229,7 @@ class WasdInterface(object):
 
         # Stuff that for images logging.
         self._img_index = 0
-        self._dir = os.path.join(os.getcwd(), "./data/" + self._params.dir)
+        self._dir = os.path.join(os.getcwd(), "../../data/deployment/" + self._params.dir)
         if not os.path.exists(self._dir):
             os.makedirs(self._dir)
         self._stop_capture = True
@@ -653,7 +653,7 @@ def _setup_logging(verbose):
 import hydra
 from omegaconf import DictConfig, OmegaConf
 
-@hydra.main(version_base=None, config_path="../conf", config_name="spot_config")
+@hydra.main(version_base=None, config_path="../configs", config_name="spot_config")
 def main(cfg):
     """Command-line interface."""
     print(OmegaConf.to_yaml(cfg))

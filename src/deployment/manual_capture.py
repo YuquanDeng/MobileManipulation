@@ -152,7 +152,7 @@ class AsyncImageCapture(AsyncGRPCTask):
 
         # create a directory(if not exists) for saving trajectory images. 
         self.waypoint_idx = 0
-        self.directory = './data/' + self._params['dir']
+        self.directory = '../../data/deployment' + self._params['dir']
         if not os.path.isdir(os.path.join(os.getcwd(), self.directory)):
             try:
                 os.makedirs(self.directory)
@@ -633,7 +633,7 @@ def _setup_logging(verbose):
 import hydra
 from omegaconf import DictConfig, OmegaConf
 
-@hydra.main(version_base=None, config_path="../conf", config_name="spot_config")
+@hydra.main(version_base=None, config_path="../configs", config_name="spot_config")
 def main(cfg):
     """Command-line interface."""
     print(OmegaConf.to_yaml(cfg))

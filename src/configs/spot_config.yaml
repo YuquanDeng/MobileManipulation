@@ -16,7 +16,7 @@ username: admin
 password: dryshyyucivp
 
 # log results.
-logdir: &reference_dir './gnm_outputs/${now:%Y-%m-%d}/${now:%H-%M}'
+logdir: &reference_dir '../configs_output/deployment/${now:%m-%d}/${now:%H-%M}'
 verbose: False
 
 hostname: 192.168.80.3

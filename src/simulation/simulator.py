@@ -69,10 +69,7 @@ POINT_NAV_ROTATION = quaternion.quaternion(np.quaternion(0.56448882818222, 0, 0.
 class Simulator(object):
     def __init__(self) -> None:
         hydra.core.global_hydra.GlobalHydra.instance().clear()
-        self.config = habitat.get_config(
-            config_path="pointnav_habitat_test.yaml",
-            configs_dir=os.path.join(os.getcwd(), '../configs/nav/')
-        )
+        self.config = habitat.get_config("benchmark/nav/pointnav/pointnav_habitat_test.yaml")
         
 
         self.actions = {
@@ -131,8 +128,6 @@ class Simulator(object):
                     "collisions": CollisionsMeasurementConfig(),
                 }
         )
-        print(self.config['habitat'])
-        raise NotImplementedError
         self.env = habitat.Env(config=self.config)
         self.sim = self.env.sim
         self.agent = self.sim.agents[0]

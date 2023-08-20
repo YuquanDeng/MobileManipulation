@@ -16,6 +16,7 @@ from typing import cast, Dict, List
 import quaternion
 
 
+
 from habitat.config.default import get_agent_config
 from habitat.config.default_structured_configs import HabitatSimRGBSensorConfig
 
@@ -35,6 +36,7 @@ from habitat.utils.visualizations.utils import (
     draw_collision,
 )
 import hydra
+from omegaconf import DictConfig, OmegaConf
 
 # Utils.
 sys.path.append("../")
@@ -67,7 +69,11 @@ POINT_NAV_ROTATION = quaternion.quaternion(np.quaternion(0.56448882818222, 0, 0.
 class Simulator(object):
     def __init__(self) -> None:
         hydra.core.global_hydra.GlobalHydra.instance().clear()
-        self.config = habitat.get_config("benchmark/nav/pointnav/pointnav_habitat_test.yaml")
+        self.config = habitat.get_config(
+            config_path="pointnav_habitat_test.yaml",
+            configs_dir=os.path.join(os.getcwd(), '../configs/nav/')
+        )
+        
 
         self.actions = {
             "w": (HabitatSimActions.move_forward, 'FORWARD'), 
@@ -125,7 +131,8 @@ class Simulator(object):
                     "collisions": CollisionsMeasurementConfig(),
                 }
         )
-
+        print(self.config['habitat'])
+        raise NotImplementedError
         self.env = habitat.Env(config=self.config)
         self.sim = self.env.sim
         self.agent = self.sim.agents[0]
@@ -134,7 +141,17 @@ class Simulator(object):
 
         print("action space: ", self.agent.agent_config.action_space[keys[1]].actuation.amount)
         print("-"*50)
-
+    
+    def recursive_iter(self, cfg):
+        """
+        Log omegaconf.DictConfig object key values pairs recursively on the terminal.
+        """
+        for key, value in cfg.items():
+            if isinstance(value, (dict, DictConfig)):
+                print(f"Entering {key}")
+                self.recursive_iter(value)
+            else:
+                print(f"{key}: {value}")
 
     def add_batch_dim(self, img:np.ndarray) -> np.ndarray:
         """
@@ -640,11 +657,11 @@ def main():
     """
     simulator = Simulator()
     simulator.init_env()
-    simulator.run_sim_with_topdown_map(
-        log_action=False,
-        init_pos=None,
-        init_rotation=None,
-        )
+    # simulator.run_sim_with_topdown_map(
+    #     log_action=False,
+    #     init_pos=None,
+    #     init_rotation=None,
+    #     )
 
 
 if __name__ == '__main__':

@@ -30,6 +30,10 @@ sensor_orientation:
   - 0 
 hfov: 90
 
+# configs for loadind scenes dataset
+scenes_dir: '../../data/habitat/scene_datasets'
+data_path: '../../data/habitat/datasets/pointnav/habitat-test-scenes/v1/train/train.json.gz'
+
 # log results.
 logdir: &reference_dir './gnm_outputs/${now:%Y-%m-%d}/${now:%H-%M}'
 

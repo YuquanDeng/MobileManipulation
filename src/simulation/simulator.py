@@ -108,6 +108,12 @@ class Simulator(object):
                     )}
                 )
 
+                ## update the path of datasets.
+                self.config.habitat.dataset.scenes_dir = params['scenes_dir']
+                self.config.habitat.dataset.data_path = params['data_path']
+                # self.config.habitat.dataset.scenes_dir ='../../data/habitat/scene_datasets'
+                # self.config.habitat.dataset.data_path = '../../data/habitat/datasets/pointnav/habitat-test-scenes/v1/train/train.json.gz'
+
             self.config.habitat.task.measurements.update(
                 {
                     "top_down_map": TopDownMapMeasurementConfig(
@@ -127,7 +133,8 @@ class Simulator(object):
                     ),
                     "collisions": CollisionsMeasurementConfig(),
                 }
-        )
+            )
+            
         self.env = habitat.Env(config=self.config)
         self.sim = self.env.sim
         self.agent = self.sim.agents[0]
@@ -648,15 +655,15 @@ class Simulator(object):
 
 def main():
     """
-    Test run_sim_with_topdown_map method
+    Test run_sim_with_topdown_map method.
     """
     simulator = Simulator()
     simulator.init_env()
-    # simulator.run_sim_with_topdown_map(
-    #     log_action=False,
-    #     init_pos=None,
-    #     init_rotation=None,
-    #     )
+    simulator.run_sim_with_topdown_map(
+        log_action=False,
+        init_pos=None,
+        init_rotation=None,
+        )
 
 
 if __name__ == '__main__':

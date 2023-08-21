@@ -53,6 +53,10 @@ from threading import BrokenBarrierError, Thread
 from bosdyn.api.image_pb2 import ImageSource
 from multiprocessing import Barrier, Process, Queue, Value, Lock
 
+# LOGGING & CONFIG 
+import hydra
+from omegaconf import DictConfig, OmegaConf
+
 LOGGER = logging.getLogger()
 
 
@@ -649,9 +653,6 @@ def _setup_logging(verbose):
     LOGGER.addHandler(stream_handler)
     return stream_handler
 
-# LOGGING & CONFIG 
-import hydra
-from omegaconf import DictConfig, OmegaConf
 
 @hydra.main(version_base=None, config_path="../configs", config_name="spot_config")
 def main(cfg):

@@ -60,9 +60,9 @@ from bosdyn.client.math_helpers import Quat, SE3Pose
 
 
 
-MODEL_CONFIG_PATH = os.path.join(os.getcwd(), "../drive-any-robot/deployment/config/models.yaml")
-MODEL_WEIGHTS_PATH = os.path.join(os.getcwd(), "../drive-any-robot/deployment/model_weights")
-TOPOMAP_IMAGES_DIR = "./data"
+MODEL_CONFIG_PATH = os.path.join(os.getcwd(), "../../third_party/drive-any-robot/deployment/config/models.yaml")
+MODEL_WEIGHTS_PATH = os.path.join(os.getcwd(), "../../third_party/drive-any-robot/deployment/model_weights")
+TOPOMAP_IMAGES_DIR = "../../data/deployment"
 
 # DEFAULT MODEL PARAMETERS (can be overwritten by model.yaml)
 model_params = {
@@ -528,7 +528,7 @@ class MobileAgent():
                                                                      closest_node,
                                                                      chosen_waypoint, 
                                                                      start)
-            concatenated_imgs.save('./data/real_obs.jpg')
+            concatenated_imgs.save('../../data/deployment/real_obs.jpg')
 
             # Check reach goal.
             if reached_goal:
@@ -541,6 +541,7 @@ class MobileAgent():
         print("Shutting down the agent...")
         self._lease_keep.shutdown()
         self._lease_client.return_lease(self._lease)
+
 
 
     def get_go_to(self, world_tform_object, robot_state, mobility_params, dist_margin=0.5):
@@ -710,7 +711,7 @@ class MobileAgent():
         
         return True
 
-@hydra.main(version_base=None, config_path="../conf", config_name="spot_config")
+@hydra.main(version_base=None, config_path="../configs", config_name="spot_config")
 def main(cfg):
     print(OmegaConf.to_yaml(cfg))
     print("-"*50)

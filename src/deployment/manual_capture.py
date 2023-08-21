@@ -44,6 +44,10 @@ from bosdyn.client.robot_state import RobotStateClient
 from bosdyn.client.time_sync import TimeSyncError
 from bosdyn.util import duration_str, format_metric, secs_to_hms
 
+# LOGGING & CONFIG 
+import hydra
+from omegaconf import DictConfig, OmegaConf
+
 LOGGER = logging.getLogger()
 
 
@@ -152,7 +156,7 @@ class AsyncImageCapture(AsyncGRPCTask):
 
         # create a directory(if not exists) for saving trajectory images. 
         self.waypoint_idx = 0
-        self.directory = '../../data/deployment' + self._params['dir']
+        self.directory = '../../data/deployment/' + self._params['dir']
         if not os.path.isdir(os.path.join(os.getcwd(), self.directory)):
             try:
                 os.makedirs(self.directory)
@@ -367,10 +371,6 @@ class WasdInterface(object):
         try:
             cmd_function = self._command_dictionary[key]
             cmd_function()
-
-            # # Log image if take action.
-            # if key in self.discrete_action:
-            #     self._image_task.take_image()
 
 
         except KeyError:
@@ -629,9 +629,6 @@ def _setup_logging(verbose):
     LOGGER.addHandler(stream_handler)
     return stream_handler
 
-# LOGGING & CONFIG 
-import hydra
-from omegaconf import DictConfig, OmegaConf
 
 @hydra.main(version_base=None, config_path="../configs", config_name="spot_config")
 def main(cfg):

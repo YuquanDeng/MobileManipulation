@@ -36,11 +36,13 @@ dir: 'test'
 # interval between acquiring images
 sleep_between_capture: 0.2
 
-# disable creating yaml file just set dir = . 
-hydra:
-  run:
-    dir: *reference_dir
+# Disable logging
+defaults:  
+  - _self_  
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled 
 
-defaults: 
-  - _self_ 
-  - override hydra/job_logging: disabled  
+hydra:
+  output_subdir: null
+  run:
+    dir: .

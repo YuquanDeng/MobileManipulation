@@ -31,8 +31,7 @@ import io
 # MODELS
 import sys
 import os
-sys.path.append(os.path.join(os.getcwd(), "../drive-any-robot/train"))
-
+sys.path.append(os.path.join(os.getcwd(), "../../third_party/drive-any-robot/train"))
 from gnm_train.models.gnm import GNM
 from gnm_train.models.stacked import StackedModel
 from gnm_train.models.siamese import SiameseModel

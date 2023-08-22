@@ -105,3 +105,42 @@ pip install -e third_party/drive-any-robot/train/
 </code></pre>
 
 ## Deployment 
+
+
+### Create topological map in habitat simulation
+- Activate `mobile_manipulation` virtual environment.
+<pre>
+  <code>
+    conda activate mobile_manipulation
+    cd src/simulation
+    python3 create_topomap.py
+  </code>
+</pre>
+The `create_topomap.py` script will load the [topomap_config.yaml](https://github.com/YuquanDeng/MobileManipulation/blob/main/src/configs/topomap_config.yaml) under the directory `src/configs`. In this file, you can specify the setting of the topomap:
+- `dir`(str,  default: string): The name of the logging directory.
+- `playback`(bool, default: true): 
+- `no_reset_pos`(bool, default: false): Resetting the initial position or not.
+- `init_pos`(str, default: bl): The map is a rectangle. The initial position has four options: bottom left(bl), bottom right(br), upper left(ul), upper right(ur).
+- `init_rot`(str, default: right): The rotation angle has four options: up, down, left, right.
+- `resolution`(int, default: 256): resolution of the camera
+- `width`(int, default: 256): The width of the image
+- `height`(int, default: 256): The height of the image
+- `sensor_position`(tuple, default: 0, 1.25, 0): The position of the sensor(e.g. RGB sensor or depth sensor). For the coordinate, please refer to [Coordinate Frame](https://aihabitat.org/docs/habitat-sim/coordinate-frame-tutorial.html). For the deafult case, `1.25` means the height of the sensor is 1.25 meter.
+- `sensor_orientation`(tuple, default: 0, 0, 0): The orientatin of the sensor(e.g. RGB sensor or depth sensor).\
+- `hfov`(int, default: 90): The field of view of the camera. The default value is 90 degrees.
+
+`scenes_dir`: The directory of loading scenes dataset.
+`data_path`: The directory of loading other habitat lab configs.
+`logdir`: The directory of logging overrided configs of topomap.yaml.
+
+### Running the GNM in Habitat Simulation 
+<pre>
+  <code>
+    cd src/simulation
+    python3 navigate.py
+  </code>
+</pre>
+
+
+
+

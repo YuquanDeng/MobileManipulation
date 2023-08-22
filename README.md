@@ -25,6 +25,9 @@ data
 
 ## Installation
 Since habitat simulation requires python version at least higher than 3.9 while spot-sdk only supports python version 3.6-3.8, unfortunately we have to create two virtual environments for the setup.
+
+- Download GNM checkpoint `gnm_large` under the directory `third_party/drive-any-robot/deployment/model_weights` from [this link](https://drive.google.com/drive/folders/1np7D0Ak7x10IoQn9h0qxn8eoxJQiw8Dr?usp=share_link).
+
 ### Simulation environment setup
 1. create virtual environment `mobile_manipulation`.
 <pre><code>
@@ -77,4 +80,28 @@ python examples/example.py
 
 For more installation and testing details: [habitat-sim installation](https://github.com/facebookresearch/habitat-sim) and [habitat-lab](https://github.com/facebookresearch/habitat-lab) installation.
 
+- GNM Setup
+<pre><code>
+pip install torch==1.11.0 torchvision==0.12.0 tqdm==4.64.0 numpy==1.24.0
+conda install -c pytorch matplotlib
+pip install -e third_party/drive-any-robot/train/
+</code></pre>
 
+### Spot Deployment Environment Setup
+- Create another virtual environment `deployment`
+<pre><code>
+python3.8 -m venv deployment
+source deployment/bin/activate
+
+python3 -m pip install bosdyn-client==3.2.3 bosdyn-mission==3.2.3 bosdyn-choreography-client==3.2.3
+python3 -m pip list --format=columns | grep bosdyn
+</code></pre>
+
+- GNM Setup
+<pre><code>
+pip install torch==1.11.0 torchvision==0.12.0 tqdm==4.64.0 numpy==1.24.0
+conda install -c pytorch matplotlib
+pip install -e third_party/drive-any-robot/train/
+</code></pre>
+
+## Deployment 

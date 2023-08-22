@@ -1,6 +1,30 @@
 # Mobile Manipulation
 
+## Overview
+This repository contains code of deploying GNM(refer to General Navigation Model in the paper [GNM: A General Navigation Model to Drive Any Robot](https://arxiv.org/abs/2210.03370)) in [habitat](https://aihabitat.org/) simulation environment and the robot [Spot](https://bostondynamics.com/products/spot/). The repository has the following structure:
+
+<pre> <code>
+data
+  ├── deployment
+  |   └── &lt;name_of_traj1&gt;
+  |       ├── 0.jpg
+  |       ├── 1.jpg
+  |       └── ...
+  ├── habitat
+  |   └── topomap
+  |       └── &lt;name_of_traj1&gt;
+  |           ├── action
+  |           |   └── ...pkl
+  |           └── images
+  |               ├── 0.jpg
+  |               ├── 1.jpg
+  |               └── ... 
+  └── siamese
+</code> </pre>
+
+
 ## Installation
+
 
 ### habitat-sim
 Setup the habitat simulation environment by following the issue https://github.com/facebookresearch/habitat-sim/issues/2049

@@ -112,13 +112,11 @@ data
 
 ### Create topological map in habitat simulation
 - Activate `mobile_manipulation` virtual environment.
-<pre>
-  <code>
-    conda activate mobile_manipulation
-    cd src/simulation
-    python3 create_topomap.py
-  </code>
-</pre>
+<pre><code>
+conda activate mobile_manipulation
+cd src/simulation
+python3 create_topomap.py
+</code></pre>
 The `create_topomap.py` script will load the [topomap_config.yaml](https://github.com/YuquanDeng/MobileManipulation/blob/main/src/configs/topomap_config.yaml) under the directory `src/configs`. In this file, you can specify the setting of the topomap:
 - `dir`(str,  default: 'testing'): The name of the logging directory of recorded topological map. 
 - `playback`(bool, default: true): 
@@ -139,29 +137,23 @@ The `create_topomap.py` script will load the [topomap_config.yaml](https://githu
 The `create_topomap.py` script will also load `gnm_config.yaml`. For the details of the parameters please refer to `Running the model` in the [drive-any-robot](https://github.com/YuquanDeng/drive-any-robot) repository.
 
 ### Running the GNM in Habitat Simulation 
-<pre>
-  <code>
-    cd src/simulation
-    python3 navigate.py
-  </code>
-</pre>
+<pre><code>
+cd src/simulation
+python3 navigate.py
+</code></pre>
 
 ## Deployment on the robot Spot
 - Activate the virtual environment `deployment`
-<pre>
-  <code>
-    source deployment/bin/activate
-  </code>
-</pre>
+<pre><code>
+source deployment/bin/activate
+</code></pre>
 
 ### Record the trajectory
 The script `capture_image.py` is a `wasd` interface to operate spot and starting capturing image by press "I" and ending capturing image by pressing "O".
-<pre>
-  <code>
-        cd src/deployment
-        python3 capture_image.py
-  </code>
-</pre>
+<pre><code>
+cd src/deployment
+python3 capture_image.py
+</code></pre>
 
 - The script `capture_image.py` loads the `spot_config.yaml` under the directory `src/configs`. In this file, you can specify the parameter of the Spot:
 - `hostname`(default: 192.168.80.3): The hostname of connecting to the Spot.
@@ -176,12 +168,10 @@ The script `capture_image.py` is a `wasd` interface to operate spot and starting
 
 
 ### Running the GNM on the robot Spot
-<pre>
-  <code>
-        cd src/deployment
-        python3 navigate.py
-  </code>
-</pre>
+<pre><code>
+cd src/deployment
+python3 navigate.py
+</code></pre>
 
 
 

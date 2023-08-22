@@ -28,7 +28,7 @@ scenes_dir: '../../data/habitat/scene_datasets'
 data_path: '../../data/habitat/datasets/pointnav/habitat-test-scenes/v1/train/train.json.gz'
 
 # log results.
-logdir: &reference_dir './sim_outputs/${now:%Y-%m-%d}/${now:%H-%M}'
+logdir: &reference_dir '../config_outputs/habitat/topomap/${now:%m-%d}/${now:%H-%M}'
 
 # python foo.py hydra.run.dir=. hydra.output_subdir=null hydra/job_logging=disabled hydra/hydra_logging=disabled
 defaults:  

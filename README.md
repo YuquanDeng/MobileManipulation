@@ -173,7 +173,7 @@ cd src/deployment
 python3 navigate.py
 </code></pre>
 
-## Unsolved Issues
+## Unresolved Issues
 - After testing GNM on some trajecties involved turning, the GNM doesn't work well(i.e. it takes long time to finish a short distance trajectory or get stuck with some intermediate short goal image). Fine tune the parameters doesn't help that much on the performance. The quesiton is why GNM doesn't work. For the following work, it will be good to build some visulization tools to help the understandings:
 - simulate the spot configuration in Habitat and do the top-down visualization.
 - visualize the top down visualization in the real world by using  http://wiki.ros.org/rtabmap_ros, an example will be in https://homes.cs.washington.edu/~xiangyun/topological_nav/sample_videos.html .

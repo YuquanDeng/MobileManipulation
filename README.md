@@ -104,8 +104,7 @@ conda install -c pytorch matplotlib
 pip install -e third_party/drive-any-robot/train/
 </code></pre>
 
-## Deployment 
-
+## Deployment in Simulation
 
 ### Create topological map in habitat simulation
 - Activate `mobile_manipulation` virtual environment.
@@ -117,7 +116,7 @@ pip install -e third_party/drive-any-robot/train/
   </code>
 </pre>
 The `create_topomap.py` script will load the [topomap_config.yaml](https://github.com/YuquanDeng/MobileManipulation/blob/main/src/configs/topomap_config.yaml) under the directory `src/configs`. In this file, you can specify the setting of the topomap:
-- `dir`(str,  default: string): The name of the logging directory.
+- `dir`(str,  default: 'testing'): The name of the logging directory of recorded topological map. 
 - `playback`(bool, default: true): 
 - `no_reset_pos`(bool, default: false): Resetting the initial position or not.
 - `init_pos`(str, default: bl): The map is a rectangle. The initial position has four options: bottom left(bl), bottom right(br), upper left(ul), upper right(ur).
@@ -133,6 +132,8 @@ The `create_topomap.py` script will load the [topomap_config.yaml](https://githu
 `data_path`: The directory of loading other habitat lab configs.
 `logdir`: The directory of logging overrided configs of topomap.yaml.
 
+The `create_topomap.py` script will also load `gnm_config.yaml`. For the details of the parameters please refer to `Running the model` in the [drive-any-robot](https://github.com/YuquanDeng/drive-any-robot) repository.
+
 ### Running the GNM in Habitat Simulation 
 <pre>
   <code>
@@ -141,6 +142,42 @@ The `create_topomap.py` script will load the [topomap_config.yaml](https://githu
   </code>
 </pre>
 
+## Deployment on the robot Spot
+- Activate the virtual environment `deployment`
+<pre>
+  <code>
+    source deployment/bin/activate
+  </code>
+</pre>
+
+### Record the trajectory
+The script `capture_image.py` is a `wasd` interface to operate spot and starting capturing image by press "I" and ending capturing image by pressing "O".
+<pre>
+  <code>
+        cd src/deployment
+        python3 capture_image.py
+  </code>
+</pre>
+
+- The script `capture_image.py` loads the `spot_config.yaml` under the directory `src/configs`. In this file, you can specify the parameter of the Spot:
+- `hostname`(default: 192.168.80.3): The hostname of connecting to the Spot.
+- `time_sync_interval_sec`(default: _): The interval between time synchronization.
+- `VELOCITY_BASE_SPEED`(float, default: 0.5 m/s): The linear velocity of the spot. The default value is 0.5 m/s.
+- `VELOCITY_BASE_ANGULAR`(float, default: 0.53 rad/sec): The angular velocity of the spot. The default value is 0.53 rad/sec.
+- `VELOCITY_CMD_DURATION`(int, default: 1 sec): The duration of commanding the velocity. 
+- `COMMAND_INPUT_RATE`(float, default: 0.1 sec): The interval of sending each command.
+- `OBSERVATION_SOURCE`(str, default: 'hand_image'): The camera source of the observation images.
+- 'dir'(str, default: `test`): The name of the logging directory of recorded topological map. 
+- `sleep_between_capture`(float, defaut: 0.2): The interval between acquiring images.
+
+
+### Running the GNM on the robot Spot
+<pre>
+  <code>
+        cd src/deployment
+        python3 navigate.py
+  </code>
+</pre>
 
 
 
